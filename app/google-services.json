@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "262914803319",
+    "firebase_url": "https://redrevoraise-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "redrevoraise",
+    "storage_bucket": "redrevoraise.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262914803319:android:f57a32503afd5832182872",
+        "android_client_info": {
+          "package_name": "com.redrevoraise.esgrating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262914803319-2q7p0vq5kavekecd8a6amsvq0phfsolp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHZ80bfzLndTakpYTDW6L8Zu6dTABdO00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262914803319-2q7p0vq5kavekecd8a6amsvq0phfsolp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

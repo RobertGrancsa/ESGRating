@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">ESG Rating App</string>
+    <string name="companies_header">Companies</string>
+    <string name="top_companies">Top Companies</string>
+    <string name="esg">ESG</string>
+    <string name="environmental">Environmental</string>
+    <string name="social">Social</string>
+    <string name="governance">Governance</string>
+    <string name="esg_values">ESG Proportions</string>
+
+    <string-array name="sortBy">
+        <item>Name</item>
+        <item>Ticker</item>
+        <item>Rating</item>
+    </string-array>
+    <string-array name="upDown">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="aa">ScrollingActivity</string>
+
+    <string name="page_header_01">What does ESG stand for?</string>
+    <string name="page_header_02">How is the Environmental criteria within ESG measured?</string>
+    <string name="page_header_03">How is the Social criteria within ESG measured?</string>
+    <string name="page_header_04">How is the Governance criteria within ESG measured?</string>
+    <string name="page_header_05">Why are ESG scores important for companies?</string>
+
+    <string name="page_body_01">ESG criteria are the environmental criteria, social criteria, and governance criteria used to assess overall company performance. The ESG criteria look beyond the financial success of a company and instead assess how sustainably and ethically a business is being run. Analysis of the non-financial operations of a company can determine whether an organization will be successful in the long-term.</string>
+    <string name="page_body_02">Within ESG, the environmental criteria are measured against how well a company upholds regulations that protect the environment. Environmental criteria consider whether a particular company poses any potential threat to the environment and whether the company in question is equipped in a way that allows it to deal with any potential environmental risks.</string>
+    <string name="page_body_03">Within ESG, the social criteria are based on how a company treats its employees, customers, vendors, and the attention it pays to the local and wider communities it is based in.</string>
+    <string name="page_body_04">Within ESG, governance criteria are measured according to the distribution of decision-making processes across company stakeholders. The governance criteria relate to company accounting methods, tax audits, its shareholder rights, the salaries of its top-level executives, as well as the controls it places on these internal policies. Government regulations set the foundation for these criteria, but it is ESG providers who evaluate a company’s adherence to the regulations set by a particular government.</string>
+    <string name="page_body_05">ESG data providers measure a company against their checklist to calculate an overall ESG rating for the company. The ESG score of a company and its adherence to environmental, social, and governmental criteria is important as it assesses the potential growth of a company and the company’s ability to do business in the long-run. The ESG score can inform investors, allowing them to decide whether they wish to put money into a particular company.</string>
+
+    <string name="topEsgHeader">Best Overall</string>
+    <string name="topEHeader">Best Environment</string>
+    <string name="topSHeader">Best Social</string>
+    <string name="topGHeader">Best Governance</string>
+
+</resources>

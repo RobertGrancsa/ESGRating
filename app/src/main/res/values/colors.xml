@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_200">#C4BF8D</color>
+    <color name="main_500">#C69753</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#886F68</color>
+    <color name="white_bg">#3D2C2E</color>
+    <color name="black_bg">#FF222325</color>
+    <color name="grey">#FF323232</color>
+    <color name="bg_good">#7EA172</color>
+    <color name="bg_bad">#A71D31</color>
+
+    <color name="environment">#84B082</color>
+    <color name="social">#EEE3AB</color>
+    <color name="governance">#3E5C76</color>
+    <color name="predict">#8884FF</color>
+</resources>
