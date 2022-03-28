@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/white_bg">
 
-
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -16,89 +16,109 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/data"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="16dp"
-                android:paddingTop="16dp"
-                android:paddingEnd="16dp"
-                android:background="@drawable/background_grad_good"
-                android:paddingBottom="32dp">
+                android:layout_height="match_parent">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/bgText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/companyNameDash"
-                        android:layout_width="172dp"
-                        android:layout_height="100dp"
-                        android:autoSizeMaxTextSize="36sp"
-                        android:autoSizeMinTextSize="18sp"
-                        android:autoSizeStepGranularity="2sp"
-                        android:text="Tesla"
-                        android:textColor="@color/main_500"
-                        android:textFontWeight="700"
-                        android:textSize="36sp"
-                        android:transitionName="name"
-
-                        app:autoSizeTextType="uniform" />
-
-                    <TextView
-                        android:id="@+id/companyTickerScreen"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TSL"
-                        android:textSize="24sp"
-                        android:transitionName="ticker" />
-                </LinearLayout>
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="84dp"
+                    android:alpha="0.6"
+                    android:text="-8"
+                    android:textColor="#527347"
+                    android:textFontWeight="900"
+                    android:textSize="128sp"
+                    app:layout_constraintEnd_toStartOf="@+id/data"
+                    app:layout_constraintTop_toBottomOf="@+id/data" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="end"
-                    android:layout_weight="4"
-                    android:orientation="vertical">
+                    android:id="@+id/data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_grad_good"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="32dp">
 
-                    <TextView
-                        android:id="@+id/currentESG"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:text="1204"
-                        android:textFontWeight="600"
-                        android:textSize="40sp"
-                        android:transitionName="esg" />
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/companyGrade"
+                        <TextView
+                            android:id="@+id/companyNameDash"
+                            android:layout_width="172dp"
+                            android:layout_height="100dp"
+                            android:autoSizeMaxTextSize="36sp"
+                            android:autoSizeMinTextSize="18sp"
+                            android:autoSizeStepGranularity="2sp"
+                            android:text="Tesla, Inc."
+                            android:textColor="@color/main_500"
+                            android:textFontWeight="700"
+                            android:textSize="36sp"
+                            android:transitionName="name"
+
+                            app:autoSizeTextType="uniform" />
+
+                        <TextView
+                            android:id="@+id/companyTickerScreen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TSLA"
+                            android:textSize="24sp"
+                            android:transitionName="ticker" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_gravity="end"
-                        android:alpha="50"
-                        android:text="BBB"
-                        android:textFontWeight="700"
-                        android:textSize="24sp"
-                        android:transitionName="grade" />
+                        android:layout_weight="4"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/sector"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_alignParentBottom="true"
-                        android:gravity="bottom|end"
-                        android:text="Computer Manufacturing
-                        Technology"
-                        android:textColor="@color/main_500"
-                        android:alpha="0.7"
-                        android:textFontWeight="400"
-                        android:textSize="18sp" />
+                        <TextView
+                            android:id="@+id/currentESG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:text="922"
+                            android:textFontWeight="600"
+                            android:textSize="40sp"
+                            android:transitionName="esg" />
+
+                        <TextView
+                            android:id="@+id/companyGrade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:alpha="50"
+                            android:text="BB"
+                            android:textFontWeight="700"
+                            android:textSize="24sp"
+                            android:transitionName="grade" />
+
+                        <TextView
+                            android:id="@+id/sector"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:alpha="0.7"
+                            android:gravity="bottom|end"
+                            android:text="Auto Manufacturing Capital Goods"
+                            android:textColor="@color/main_500"
+                            android:textFontWeight="400"
+                            android:textSize="18sp" />
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
+            </RelativeLayout>
 
             <HorizontalScrollView
                 android:id="@+id/numbers_chips"
@@ -160,7 +180,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginBottom="32dp" >
+                android:layout_marginBottom="32dp">
 
             </com.github.mikephil.charting.charts.LineChart>
 
@@ -180,7 +200,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="1204"
+                        android:text="523"
                         android:textFontWeight="600"
                         android:textSize="40sp" />
 
@@ -190,7 +210,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:alpha="50"
-                        android:text="BBB"
+                        android:text="A"
                         android:textFontWeight="700"
                         android:textSize="24sp" />
 
@@ -216,7 +236,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="956"
+                        android:text="144"
                         android:textFontWeight="600"
                         android:textSize="40sp" />
 
@@ -226,7 +246,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:alpha="50"
-                        android:text="AA"
+                        android:text="CC"
                         android:textFontWeight="700"
                         android:textSize="24sp" />
 
@@ -240,6 +260,7 @@
                         android:textFontWeight="400"
                         android:textSize="18sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -251,7 +272,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="300"
+                        android:text="255"
                         android:textFontWeight="600"
                         android:textSize="40sp" />
 
@@ -261,7 +282,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:alpha="50"
-                        android:text="J"
+                        android:text="B"
                         android:textFontWeight="700"
                         android:textSize="24sp" />
 

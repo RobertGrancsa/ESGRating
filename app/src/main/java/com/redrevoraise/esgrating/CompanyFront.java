@@ -4,12 +4,12 @@ public class CompanyFront {
     private String company_name;
     private String stock_symbol;
     private String total_grade;
-    private Float total;
+    private Integer total;
 
     public CompanyFront() {
     }
 
-    public CompanyFront(String company_name, String stock_symbol, String total_grade, Float total) {
+    public CompanyFront(String company_name, String stock_symbol, String total_grade, Integer total) {
         this.company_name = company_name;
         this.stock_symbol = stock_symbol;
         this.total_grade = total_grade;
@@ -40,11 +40,11 @@ public class CompanyFront {
         this.total_grade = total_grade;
     }
 
-    public Float getTotal() {
+    public Integer getTotal() {
         return total;
     }
 
-    public void setTotal(Float total) {
+    public void setTotal(Integer total) {
         this.total = total;
     }
 }

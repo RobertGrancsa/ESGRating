@@ -21,13 +21,8 @@ public class FirebaseDatabaseHelper {
     private DatabaseReference mReferenceCompanyFront;
     private DatabaseReference mReferenceCompany;
     private DatabaseReference mReferenceTops;
-//    private DatabaseReference mReferenceHomework;
     private List<CompanyFront> companies = new ArrayList<>();
-//    private List<Homework> homeworks = new ArrayList<>();
-//    private String user;
-//    private String currentYear;
-//    private String currentSemester;
-//    private String profile;
+
 
     public interface DataStatus{
         void DataIsLoadedComp(List<CompanyFront> companies, List<String> keys);
@@ -40,11 +35,6 @@ public class FirebaseDatabaseHelper {
 
     public FirebaseDatabaseHelper() {
         mDatabase = FirebaseDatabase.getInstance();
-//        profile = "CTI"; // TODO link users profile and semester/year when he logs in
-//        currentYear = "Anul_1";
-//        currentSemester = "Semestrul_1";
-//        user = "https://awaree-ea116-default-rtdb.firebaseio.com/Specializations/"+profile+"/"+currentYear+"/"+currentSemester;
-//        mReferenceSubjects = mDatabase.getReferenceFromUrl(user);
         mReferenceCompanyFront = mDatabase.getReference("CompanyList");
         mReferenceCompany = mDatabase.getReference("Companies");
         mReferenceTops = mDatabase.getReference("Tops");

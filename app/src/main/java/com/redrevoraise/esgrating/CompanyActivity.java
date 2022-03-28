@@ -52,6 +52,7 @@ public class CompanyActivity extends AppCompatActivity {
     private LinearLayout data;
     private TextView companySector;
     private ChipGroup chipGroup;
+    private TextView bgText;
 
     private TextView eScore;
     private TextView eGrade;
@@ -88,6 +89,7 @@ public class CompanyActivity extends AppCompatActivity {
         companySector = findViewById(R.id.sector);
         data = findViewById(R.id.data);
         chipGroup = findViewById(R.id.chipGroup);
+        bgText = findViewById(R.id.bgText);
 
         eScore = findViewById(R.id.eScore);
         eGrade = findViewById(R.id.eGrade);
@@ -134,18 +136,11 @@ public class CompanyActivity extends AppCompatActivity {
 
             @Override
             public void DataIsLoadedCompany(Company company, String key) {
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//
-//                    }
-//                }, 1000);
                 comp = company;
                 updateView(company);
                 makePieChart(company);
                 addData(0);
                 setBackground();
-//                        toolBarLayout.setTitle(company.getCompany_name());
                 Log.d(TAG, "DataIsLoadedCompany: DOne");
             }
 
@@ -173,13 +168,15 @@ public class CompanyActivity extends AppCompatActivity {
 
     private void setBackground() {
         int size = comp.getESG_score_peers().size();
-        if (comp.getESG_score_peers().get(size - 1) > comp.getESG_score_peers().get(size - 4)) {
+        Integer diff = comp.getESG_score_peers().get(size - 1) - comp.getESG_score_peers().get(size - 4);
+        if (diff > 0) {
             data.setBackground(getDrawable(R.drawable.background_grad_good));
-//            toolBarLayout.setContentScrim(getDrawable(R.color.bg_good));
+            bgText.setTextColor(Color.parseColor("#527347"));
         } else {
             data.setBackground(getDrawable(R.drawable.background_grad_bad));
-//            toolBarLayout.setContentScrim(getDrawable(R.color.bg_bad));
+            bgText.setTextColor(getColor(R.color.bg_bad));
         }
+        bgText.setText(diff.toString());
 
     }
 
@@ -229,9 +226,6 @@ public class CompanyActivity extends AppCompatActivity {
         dataSets.add(setComp2);
 
         LineData data = new LineData(dataSets);
-
-//        LineDataSet dataSet = new LineDataSet(testData, dataType);
-//        LineData lineData = new LineData(data);
 
         Drawable drawable = null;
         Drawable predictDraw = ContextCompat.getDrawable(this, R.drawable.predict_gradient);
@@ -310,10 +304,6 @@ public class CompanyActivity extends AppCompatActivity {
         pieEntries.add(new PieEntry(company.getSocial_score(), getString(R.string.social)));
         pieEntries.add(new PieEntry(company.getGovernance_score(), getString(R.string.governance)));
 
-//        pieEntries.get(0).setIcon(getDrawable(R.drawable.ic_baseline_eco_24));
-//        pieEntries.get(0)
-
-
         PieDataSet dataSet = new PieDataSet(pieEntries, getString(R.string.esg_values));
         PieData pieData = new PieData(dataSet);
 
@@ -323,7 +313,6 @@ public class CompanyActivity extends AppCompatActivity {
 
         pieData.setValueTextSize(12f);
         pieData.setValueTextColor(Color.WHITE);
-//        pieData.getDataSet().set
 
         esgChart.setCenterTextColor(getColor(R.color.black_bg));
         esgChart.setData(pieData);
